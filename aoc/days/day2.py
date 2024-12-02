@@ -1,9 +1,8 @@
-
-
 def get_data():
     with open("aoc/input/day2.txt") as f:
         lines = f.readlines()
         return lines
+
 
 def part1(data):
     total = 0
@@ -19,17 +18,16 @@ def part1(data):
 
     print("Day2 part 1:", total)
 
+
 def check_values(points):
     incr: bool | None = None
     for i in range(len(points) - 1):
-        diff = points[i+1] - points[i]
+        diff = points[i + 1] - points[i]
 
         if incr is None:
             incr = diff > 0
 
-        if not incr:
-            diff = - diff
-
+        if not incr: diff = - diff
         if 1 <= diff <= 3:
             continue
         else:
@@ -58,9 +56,7 @@ def part2(data):
                     total += 1
                     break
 
-
     print("Day2 part 2:", total)
-
 
 
 def run():
