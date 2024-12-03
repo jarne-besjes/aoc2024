@@ -50,7 +50,6 @@ def part2(data):
             continue
         else:
             for i in range(len(points)):
-                # Create a new list excluding the i-th element
                 modified_points = points[:i] + points[i + 1:]
                 if check_values(modified_points)[0]:
                     total += 1
